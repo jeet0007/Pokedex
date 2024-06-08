@@ -36,10 +36,7 @@ module.exports = {
       backgroundColor: ["active"],
     },
   },
-  plugins: [
-    require("daisyui"),
-    require("@rvxlab/tailwind-plugin-ios-full-height"),
-  ],
+  plugins: [require("daisyui")],
   daisyui: {
     themes: [
       {

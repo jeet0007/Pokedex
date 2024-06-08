@@ -13,9 +13,25 @@ export const PokemonCard = ({ pokemon }) => {
   }, [url]);
 
   return (
-    <div>
-      <h2>{name}</h2>
-      <img src={pokemonData.sprites?.front_default} alt={name} />
+    <div className="card mx-5">
+      <div>
+        <img
+          src={
+            pokemonData.sprites?.other["official-artwork"].front_default ||
+            "https://via.placeholder.com/150"
+          }
+          loading="eager"
+          alt="Avatar"
+          width={"100%"}
+          className="bg-gray-100"
+        />
+        <div class="container">
+          <h4>
+            <b>{name}</b>
+          </h4>
+          <div className="flex justify-center"></div>
+        </div>
+      </div>
     </div>
   );
 };
